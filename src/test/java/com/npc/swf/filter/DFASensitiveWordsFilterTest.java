@@ -15,9 +15,9 @@ public class DFASensitiveWordsFilterTest {
   @Test
   public void testFilter() throws Exception {
     try {
-      File articleFile = new File("/home/fudw/article_all_sensitive_word");
-      //File articleFile = new File("/home/fudw/article_data_2");
-      List<String> list = FileUtils.readLines(new File("/home/fudw/keywords.txt"));
+      //File articleFile = new File("/home/fudw/filterTest/article_300M");
+      File articleFile = new File("/home/fudw/filterTest/article_all_sensitive_word_300M");
+      List<String> list = FileUtils.readLines(new File("/home/fudw/filterTest/keywords.txt"));
       long articleSize = FileUtils.sizeOf(articleFile);
       System.out.println("过滤字符：" + list.size() + "个");
       System.out.println("文件大小:" + (articleSize / 1024.0 / 1024.0));
@@ -27,7 +27,7 @@ public class DFASensitiveWordsFilterTest {
         System.out.println("第"+(i+1)+"次测试 ===================================================");
         size += articleSize;
         long start = System.currentTimeMillis();
-        String[] sw = (String[]) list.toArray(new String[list.size()]);
+        String[] sw = list.toArray(new String[list.size()]);
         Map<Character, SensitiveWordsNode> swDic = SensitiveWordsBuider.build(sw);
         SwfContext sc = new SwfContext(swDic);
 
@@ -57,21 +57,9 @@ public class DFASensitiveWordsFilterTest {
   }
 
   public static void main(String[] args) throws IOException {
-    fileProcess();
+    //fileProcess();
   }
 
-  static void fileProcess() {
-    try {
-      String article =
-          FileUtils.readFileToString(new File("/home/fudw/article_all_sensitive_word_base"));
-      for (int i = 0; i < 10; i++) {
-        FileUtils.writeStringToFile(new File("/home/fudw/article_all_sensitive_word"), article,
-            true);
-      }
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
 
-  }
   
 }

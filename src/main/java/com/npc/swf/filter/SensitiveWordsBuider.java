@@ -12,11 +12,12 @@ import java.util.Map;
  */
 public class SensitiveWordsBuider {
   
-  public static List<SensitiveWordsNode> build(List<String> words){
-    
-    return null;
+  public static Map<Character, SensitiveWordsNode> build(List<String> words){
+    String[] wordsArray = words.toArray(new String[words.size()]);
+    return build(wordsArray);
   }
-  
+
+
   public static Map<Character, SensitiveWordsNode> build(String[] sensitiveWords){
     if(sensitiveWords == null && sensitiveWords.length == 0) {
       return new HashMap<Character, SensitiveWordsNode>();
