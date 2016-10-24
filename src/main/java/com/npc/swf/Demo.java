@@ -35,10 +35,11 @@ public class Demo {
 
   public static void main(String[] args) throws Exception {
 
-    // run demo
-    //Demo();
+    //run demo
+    Demo();
+
     // run  performance testing
-    test();
+    // test();
 
 
   }
@@ -74,12 +75,12 @@ public class Demo {
     // run test
     // general article test
     System.out.println("General article test ......");
-    testAllsession(GENERAL_ARTICLE_BIG);
+    testFilterPerformance(GENERAL_ARTICLE_BIG);
     System.out.println();
 
     // all sensitive words article test
     System.out.println("All sensitive words article test ......");
-    testAllsession(ALL_SENSITIVE_WORD_ARTICLE_BIG);
+    testFilterPerformance(ALL_SENSITIVE_WORD_ARTICLE_BIG);
 
 
     //delete test data
@@ -90,7 +91,7 @@ public class Demo {
     if (fileToDel2.exists()) fileToDel2.delete();
   }
 
-  private static void testAllsession(String articleFileName) throws Exception {
+  private static void testFilterPerformance(String articleFileName) throws Exception {
     try {
       String path = classLoader.getResource("").getPath() + "/";
       File articleFile = new File(path + articleFileName);
@@ -109,14 +110,14 @@ public class Demo {
 
       long start2 = System.currentTimeMillis();
 
-      // 处理敏感字符
+      // filter sensitive words
       long swc = filter.filter(article).getSensitiverWordNumber();
 
       long end = System.currentTimeMillis();
       long time = end - start2;
 
       System.out.println("Size of article to filter:" + articleSize + "B, " + " as：" + (articleSize / 1000.0 / 1000.0) + "M");
-      System.out.println("Process :                 " + time + "ms" + "  as：" + (time / 1000.0) + "秒");
+      System.out.println("Process :                 " + time + "ms" + "  as：" + (time / 1000.0) + "s");
       System.out.println("Process speed :           " + ((articleSize / 1024.0 / 1014.0) / (time / 1000.0)) + " M/s");
     } catch (IOException e) {
       // TODO Auto-generated catch block
