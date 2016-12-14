@@ -1,4 +1,4 @@
-package com.npc.swf.utils;
+package com.npc.filter.utils;
 
 public class Config {
   private String sensitiveWordsPath = "/";
@@ -9,4 +9,3 @@ public class Config {
 enum OutPutType {
   DB,ES,MONGO,HDFS,EXCEL,LOCAL_FILE
 }
- 

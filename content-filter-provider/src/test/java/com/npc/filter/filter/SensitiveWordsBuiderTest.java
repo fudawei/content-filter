@@ -1,12 +1,9 @@
-package com.npc.swf.filter;
+package com.npc.filter.filter;
 
 import java.util.Map;
 import java.util.Set;
 
 import org.junit.Test;
-
-import com.npc.swf.filter.SensitiveWordsBuider;
-import com.npc.swf.filter.SensitiveWordsNode;
 
 public class SensitiveWordsBuiderTest {
 

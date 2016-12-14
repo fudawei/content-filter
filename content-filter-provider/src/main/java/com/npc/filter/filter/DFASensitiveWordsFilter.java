@@ -1,9 +1,9 @@
-package com.npc.swf.filter;
+package com.npc.filter.filter;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import com.npc.swf.SwfContext;
+import com.npc.filter.SwfContext;
 
 public class DFASensitiveWordsFilter extends SensitiveWordsFilter {
   

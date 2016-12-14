@@ -1,9 +1,9 @@
-package com.npc.swf;
+package com.npc.filter;
 
-import com.npc.swf.filter.DFASensitiveWordsFilter;
-import com.npc.swf.filter.Resoult;
-import com.npc.swf.filter.SensitiveWordsBuider;
-import com.npc.swf.filter.SensitiveWordsNode;
+import com.npc.filter.filter.DFASensitiveWordsFilter;
+import com.npc.filter.filter.Resoult;
+import com.npc.filter.filter.SensitiveWordsBuider;
+import com.npc.filter.filter.SensitiveWordsNode;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;

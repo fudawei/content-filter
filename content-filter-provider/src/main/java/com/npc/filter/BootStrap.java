@@ -1,4 +1,4 @@
-package com.npc.swf;
+package com.npc.filter;
 
 public class BootStrap {
 

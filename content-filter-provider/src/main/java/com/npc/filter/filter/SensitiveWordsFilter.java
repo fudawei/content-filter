@@ -1,6 +1,6 @@
-package com.npc.swf.filter;
+package com.npc.filter.filter;
 
-import com.npc.swf.SwfContext;
+import com.npc.filter.SwfContext;
 
 public abstract class SensitiveWordsFilter {
   

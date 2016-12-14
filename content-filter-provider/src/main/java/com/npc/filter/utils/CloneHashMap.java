@@ -1,4 +1,4 @@
-package com.npc.swf.utils;
+package com.npc.filter.utils;
 
 import java.util.HashMap;
 import java.util.Iterator;

@@ -1,4 +1,4 @@
-package com.npc.swf.filter;
+package com.npc.filter.filter;
 
 import java.util.Map;
 
