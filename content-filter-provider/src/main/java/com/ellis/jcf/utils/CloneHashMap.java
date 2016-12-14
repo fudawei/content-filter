@@ -1,4 +1,4 @@
-package com.npc.filter.utils;
+package com.ellis.jcf.utils;
 
 import java.util.HashMap;
 import java.util.Iterator;

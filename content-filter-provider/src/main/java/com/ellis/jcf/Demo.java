@@ -1,9 +1,9 @@
-package com.npc.filter;
+package com.ellis.jcf;
 
-import com.npc.filter.filter.DFASensitiveWordsFilter;
-import com.npc.filter.filter.Resoult;
-import com.npc.filter.filter.SensitiveWordsBuider;
-import com.npc.filter.filter.SensitiveWordsNode;
+import com.ellis.jcf.filter.SensitiveWordsBuider;
+import com.ellis.jcf.filter.DFASensitiveWordsFilter;
+import com.ellis.jcf.filter.Resoult;
+import com.ellis.jcf.filter.SensitiveWordsNode;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;

@@ -1,4 +1,4 @@
-package com.npc.filter.filter;
+package com.ellis.jcf.filter;
 
 import java.io.File;
 import java.io.IOException;
@@ -8,7 +8,7 @@ import java.util.Map;
 import org.apache.commons.io.FileUtils;
 import org.junit.Test;
 
-import com.npc.filter.SwfContext;
+import com.ellis.jcf.SwfContext;
 
 public class DFASensitiveWordsFilterTest {
 

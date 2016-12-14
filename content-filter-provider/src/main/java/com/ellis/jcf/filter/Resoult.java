@@ -1,4 +1,4 @@
-package com.npc.filter.filter;
+package com.ellis.jcf.filter;
 
 import java.util.Map;
 

@@ -1,10 +1,10 @@
-package com.npc.filter;
+package com.ellis.jcf;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import com.npc.filter.filter.SensitiveWordsNode;
-import com.npc.filter.utils.Config;
+import com.ellis.jcf.filter.SensitiveWordsNode;
+import com.ellis.jcf.utils.Config;
 
 public class SwfContext {
 

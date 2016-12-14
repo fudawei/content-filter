@@ -1,8 +1,8 @@
-package com.npc.filter.filter;
+package com.ellis.jcf.filter;
 
 import java.util.Map;
 
-import com.npc.filter.utils.CloneHashMap;
+import com.ellis.jcf.utils.CloneHashMap;
 
 public class FilterResoultProcess {
   

@@ -1,4 +1,4 @@
-package com.npc.filter.utils;
+package com.ellis.jcf.utils;
 
 public class Config {
   private String sensitiveWordsPath = "/";

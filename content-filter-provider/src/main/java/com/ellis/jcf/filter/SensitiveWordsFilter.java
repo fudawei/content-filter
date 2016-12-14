@@ -1,6 +1,6 @@
-package com.npc.filter.filter;
+package com.ellis.jcf.filter;
 
-import com.npc.filter.SwfContext;
+import com.ellis.jcf.SwfContext;
 
 public abstract class SensitiveWordsFilter {
   
