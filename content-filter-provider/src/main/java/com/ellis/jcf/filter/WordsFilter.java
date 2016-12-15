@@ -1,12 +1,13 @@
 package com.ellis.jcf.filter;
 
 import com.ellis.jcf.SwfContext;
+import com.ellis.jcf.filter.model.Resoult;
 
-public abstract class SensitiveWordsFilter {
+public abstract class WordsFilter {
   
   
   
-  public SensitiveWordsFilter(SwfContext sc) {
+  public WordsFilter(SwfContext sc) {
     super();
     this.sc = sc;
   }
@@ -14,6 +15,4 @@ public abstract class SensitiveWordsFilter {
   SwfContext sc;
     
   public abstract Resoult filter(String article);
-  
-  
 }

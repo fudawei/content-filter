@@ -9,6 +9,7 @@ import org.apache.commons.io.FileUtils;
 import org.junit.Test;
 
 import com.ellis.jcf.SwfContext;
+import com.ellis.jcf.filter.model.CharNode;
 
 public class DFASensitiveWordsFilterTest {
 
@@ -28,7 +29,7 @@ public class DFASensitiveWordsFilterTest {
         size += articleSize;
         long start = System.currentTimeMillis();
         String[] sw = list.toArray(new String[list.size()]);
-        Map<Character, SensitiveWordsNode> swDic = SensitiveWordsBuider.build(sw);
+        Map<Character, CharNode> swDic = SensitiveWordsFactory.build(sw);
         SwfContext sc = new SwfContext(swDic);
 
         System.out.println("初始化时间:" + (System.currentTimeMillis() - start) / 1000.0d);

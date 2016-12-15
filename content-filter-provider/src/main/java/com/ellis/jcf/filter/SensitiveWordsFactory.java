@@ -1,5 +1,7 @@
 package com.ellis.jcf.filter;
 
+import com.ellis.jcf.filter.model.CharNode;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -10,19 +12,19 @@ import java.util.Map;
  * </summary
  * @author fudw
  */
-public class SensitiveWordsBuider {
+public class SensitiveWordsFactory {
   
-  public static Map<Character, SensitiveWordsNode> build(List<String> words){
+  public static Map<Character, CharNode> build(List<String> words){
     String[] wordsArray = words.toArray(new String[words.size()]);
     return build(wordsArray);
   }
 
 
-  public static Map<Character, SensitiveWordsNode> build(String[] sensitiveWords){
+  public static Map<Character, CharNode> build(String[] sensitiveWords){
     if(sensitiveWords == null && sensitiveWords.length == 0) {
-      return new HashMap<Character, SensitiveWordsNode>();
+      return new HashMap<Character, CharNode>();
     }
-    Map<Character, SensitiveWordsNode>  swnMap = new HashMap<Character, SensitiveWordsNode>();
+    Map<Character, CharNode>  swnMap = new HashMap<Character, CharNode>();
     for (int i = 0; i < sensitiveWords.length; i++) {
       String word = sensitiveWords[i];
       
@@ -31,20 +33,20 @@ public class SensitiveWordsBuider {
       }
       char[] charArray = word.toCharArray();
       char first = charArray[0];
-      SensitiveWordsNode node = null;
+      CharNode node = null;
       if(swnMap.containsKey(first)) {
         node = swnMap.get(first);
       } else {
-        node = new SensitiveWordsNode();
+        node = new CharNode();
         node.setValue(first);
         node.setHead(true);
-        Map<Character, SensitiveWordsNode> nodes1 = new HashMap<Character, SensitiveWordsNode>();
+        Map<Character, CharNode> nodes1 = new HashMap<Character, CharNode>();
         node.setNodes(nodes1);
         swnMap.put(first, node);
       }
       
       int index = 1;
-      Map<Character, SensitiveWordsNode> tmpNodes = node.getNodes();
+      Map<Character, CharNode> tmpNodes = node.getNodes();
       
       while(index < charArray.length) {
         if(tmpNodes != null) {
@@ -53,8 +55,8 @@ public class SensitiveWordsBuider {
             index ++; 
             continue;
           } else {
-            SensitiveWordsNode current = new SensitiveWordsNode();
-            Map<Character, SensitiveWordsNode> nodes = new HashMap<Character, SensitiveWordsNode>();
+            CharNode current = new CharNode();
+            Map<Character, CharNode> nodes = new HashMap<Character, CharNode>();
             current.setNodes(nodes);
             current.setValue(charArray[index]);
             if(index == charArray.length - 1) {

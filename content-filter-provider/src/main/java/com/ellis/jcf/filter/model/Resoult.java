@@ -1,4 +1,4 @@
-package com.ellis.jcf.filter;
+package com.ellis.jcf.filter.model;
 
 import java.util.Map;
 
@@ -6,9 +6,8 @@ public class Resoult {
   
   private long sensitiverWordNumber;
   private Map<String, Integer> sensitiverWordCount;
-  
+
   public Resoult(long sensitiverWordNumber, Map<String, Integer> sensitiverWordCount) {
-    super();
     this.sensitiverWordNumber = sensitiverWordNumber;
     this.sensitiverWordCount = sensitiverWordCount;
   }

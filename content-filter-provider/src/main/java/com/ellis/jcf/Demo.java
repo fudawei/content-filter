@@ -1,9 +1,9 @@
 package com.ellis.jcf;
 
-import com.ellis.jcf.filter.SensitiveWordsBuider;
+import com.ellis.jcf.filter.SensitiveWordsFactory;
 import com.ellis.jcf.filter.DFASensitiveWordsFilter;
-import com.ellis.jcf.filter.Resoult;
-import com.ellis.jcf.filter.SensitiveWordsNode;
+import com.ellis.jcf.filter.model.Resoult;
+import com.ellis.jcf.filter.model.CharNode;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
@@ -55,7 +55,7 @@ public class Demo {
     String[] sw = list.toArray(new String[list.size()]);
 
     // init env for filter sensitive words
-    Map<Character, SensitiveWordsNode> swDic = SensitiveWordsBuider.build(sw);
+    Map<Character, CharNode> swDic = SensitiveWordsFactory.build(sw);
     SwfContext sc = new SwfContext(swDic);
     DFASensitiveWordsFilter filter = new DFASensitiveWordsFilter(sc);
 
@@ -102,7 +102,7 @@ public class Demo {
 
 
       String[] sw = list.toArray(new String[list.size()]);
-      Map<Character, SensitiveWordsNode> swDic = SensitiveWordsBuider.build(sw);
+      Map<Character, CharNode> swDic = SensitiveWordsFactory.build(sw);
       SwfContext sc = new SwfContext(swDic);
       DFASensitiveWordsFilter filter = new DFASensitiveWordsFilter(sc);
       System.out.println("Init  time:                 " + (System.currentTimeMillis() - start) / 1000.0d + "s");

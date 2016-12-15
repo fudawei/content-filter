@@ -1,21 +1,21 @@
-package com.ellis.jcf.filter;
+package com.ellis.jcf.filter.model;
 
 import java.util.Map;
 
 /// <summary>
 /// 敏感词树
 /// </summary>
-public class SensitiveWordsNode {
+public class CharNode {
   
   private char value;
-  private Map<Character, SensitiveWordsNode> nodes;
+  private Map<Character, CharNode> nodes;
   private boolean end = false;
   private boolean head = false;
  
-  public Map<Character, SensitiveWordsNode> getNodes() {
+  public Map<Character, CharNode> getNodes() {
     return nodes;
   }
-  public void setNodes(Map<Character, SensitiveWordsNode> nodes) {
+  public void setNodes(Map<Character, CharNode> nodes) {
     this.nodes = nodes;
   }
   public boolean isEnd() {

@@ -6,8 +6,8 @@
 	<artifactId>content-filter</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<modules>
-		<module>content-filter-open</module>
 		<module>content-filter-provider</module>
+		<module>content-filter-db</module>
 	</modules>
 	<packaging>pom</packaging>
 
